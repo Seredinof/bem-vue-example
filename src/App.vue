@@ -1,28 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Button/>
+    <cn block="list" :mods="{ big: true, hz: 'test' }">
+      <cn elem="item" :mods="{ test: true }" class="mix">
+        <cn elem="item-text" tag="span">test</cn>
+        <cn block="mix" elem="text" tag="span">hz</cn>
+      </cn>
+    </cn>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Button from '@/blocks/button/button';
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+  components: { Button },
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
